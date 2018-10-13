@@ -1,13 +1,18 @@
 package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 
 /**
- * Hello world!
+ * @author Benjamin Hammerle
+ * @version 13.10.2018
  *
+ * Klasse mit Hauptmethode
  */
-public class App 
-{
-    public static void main( String[] args )
-    {
-        System.out.println( "Hello World!" );
+public class App {
+    /**
+     * MAIN Methode
+     * @param args
+     */
+    public static void main(String[]args){
+        Menue menue= new Menue();
+        menue.starteMenue();
     }
 }
