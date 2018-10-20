@@ -74,7 +74,7 @@ public class Lager implements IDatenbank {
     public void addArtikelNeuSelectPosition(String artikelBezeichnung, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis, int zeile, int spalte){
         Artikel artikelNeu = new Artikel(artikelBezeichnung, artikelNummerID, verpackungsMenge, verpackungsEinheit, lieferant, preis);
         artikelNummerID++;
-        addArtikel(artikelNeu, zeile, spalte);
+        addArtikel(artikelNeu, zeile-1, spalte-1);
     }
 
     /**
@@ -147,7 +147,7 @@ public class Lager implements IDatenbank {
                 if(lagerPlan[zeile][spalte] != null){
                     if(lagerPlan[zeile][spalte].getArtikelNummer() == artikelNummer) {
                         gesuchterArtikel = lagerPlan[zeile][spalte].toStringArtikelKomplett();
-                        position = "\nZeile: " + zeile + "\t Spalte: " + spalte;
+                        position = "\nZeile: " + zeile+1 + "\t Spalte: " + spalte+1;
                         gesuchterArtikel += position;
                         return gesuchterArtikel;
                     }

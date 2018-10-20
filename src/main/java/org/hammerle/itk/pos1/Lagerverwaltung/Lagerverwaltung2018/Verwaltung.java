@@ -146,24 +146,14 @@ public class Verwaltung implements IBenutzer {
         for(int zeile=0; zeile<lager.getHorizontal(); zeile++){
             for(int spalte=0; spalte<lager.getVertikal(); spalte++){
                 if(lager.getArtikel(zeile, spalte) != null){
-                    lagerString += lager.getArtikel(zeile, spalte).toStringArtikelKurz() + "\n";
+                    lagerString += "Zeile: " + (zeile+1) + " Spalte: " + (spalte+1) + "    \t" + lager.getArtikel(zeile, spalte).toStringArtikelKurz() + "\n";
                 }
             }
         }
         return lagerString;
     }
 
-    /**
-     * fuellt Lager mit Beispielartikel
-     */
-    public void addBeispielArtikel(){
-        this.lager.addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
-        this.lager.addArtikelNeuAutoPosition("Semmel", 5.0, "Stueck", "Baecker", 1.80);
-        this.lager.addArtikelNeuAutoPosition("Banane", 0.3, "kg   ", "Banana Joe", 1.20);
-        this.lager.addArtikelNeuAutoPosition("Wurst", 0.4, "kg   ", "Metzger", 3.50);
-        this.lager.addArtikelNeuAutoPosition("Salat", 1.0, "Stueck", "vom Baua", 1.20);
-        this.lager.addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
-    }
+
 
 
     /**

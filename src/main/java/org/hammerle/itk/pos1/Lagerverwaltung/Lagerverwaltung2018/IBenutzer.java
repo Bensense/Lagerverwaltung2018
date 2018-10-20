@@ -9,12 +9,12 @@ package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 public interface IBenutzer {
 
     /**
-     * erstellun neues Lager (2 dimensionales Array)
+     * erstellt neues Lager (2 dimensionales Array)
      * @param horizontal
      * @param vertikal
      * @return IDatenbank
      */
-    public IDatenbank lagerErstellen(int horizontal, int vertikal);
+    IDatenbank lagerErstellen(int horizontal, int vertikal);
 
     /**
      * prueft ob Lagergroesse veraendern moeglich ist
@@ -42,14 +42,11 @@ public interface IBenutzer {
      */
     String lagertoString();
 
-    /**
-     * lagert Beispielartikel ins Lager ein
-     */
-    void addBeispielArtikel();
+
 
     /**
      * GET - SET Methoden
      */
-    public Lager getLager();
-    public void setLager(IDatenbank lager);
+    Lager getLager();
+    void setLager(IDatenbank lager);
 }

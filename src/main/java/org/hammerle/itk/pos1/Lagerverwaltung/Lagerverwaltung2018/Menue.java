@@ -75,7 +75,7 @@ public class Menue {
         int horizontal = 10;
         int vertikal = 10;
         verwaltung.lagerErstellen(horizontal, vertikal);
-        verwaltung.addBeispielArtikel();
+        addBeispielArtikel();
 
         do {
             System.out.println("*******************LAGERVERWALTUNG*******************");
@@ -157,7 +157,7 @@ public class Menue {
                         System.out.print("Spalte: ");
                         int spalte = intEingabeBefehl();
                         if(zeile <= verwaltung.getLager().getVertikal() && spalte <= verwaltung.getLager().getHorizontal()){
-                            if(verwaltung.getLager().getArtikel(zeile, spalte) == null){
+                            if(verwaltung.getLager().getArtikel(zeile-1, spalte-1) == null){
                                 verwaltung.getLager().addArtikelNeuSelectPosition(artikelBezeichnung2, verpackungsMenge2, verpackungsEinheit2, lieferant2, preis2, zeile, spalte);
                                 System.out.println("Artikel eingelagert");
                                 positionierenMoeglich = true;
@@ -300,6 +300,19 @@ public class Menue {
         this.hilfeText += "    Gibt Hilfe Text zum Menue aus \n";
         this.hilfeText += "9 = BEENDEN \n";
         this.hilfeText += "    Beendet das Programm";
+    }
+
+
+    /**
+     * fuellt Lager mit Beispielartikel
+     */
+    public void addBeispielArtikel(){
+        verwaltung.getLager().addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
+        verwaltung.getLager().addArtikelNeuAutoPosition("Semmel", 5.0, "Stueck", "Baecker", 1.80);
+        verwaltung.getLager().addArtikelNeuAutoPosition("Banane", 0.3, "kg   ", "Banana Joe", 1.20);
+        verwaltung.getLager().addArtikelNeuAutoPosition("Wurst", 0.4, "kg   ", "Metzger", 3.50);
+        verwaltung.getLager().addArtikelNeuAutoPosition("Salat", 1.0, "Stueck", "vom Baua", 1.20);
+        verwaltung.getLager().addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
     }
 
     /**
