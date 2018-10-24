@@ -2,7 +2,7 @@ package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 
 /**
  * @author Benjamin Hammerle
- * @version 13.10.2018
+ * @version 23.10.2018
  *
  * Klasse mit Hauptmethode
  */
@@ -12,7 +12,7 @@ public class App {
      * @param args
      */
     public static void main(String[]args){
-        Menue menue= new Menue();
+        Menue menue = new Menue();
         menue.starteMenue();
     }
 }

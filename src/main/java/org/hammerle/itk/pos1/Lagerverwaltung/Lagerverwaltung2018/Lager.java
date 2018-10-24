@@ -3,23 +3,29 @@ package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 
 /**
  * @author Benjamin Hammerle
- * @version 01
+ * @version 23.10.2018
  *
- * Lager als 2 dimensionales Array zum Verwalten von Artikel
+ * Lager als 2 dimensionales Array zum Einlagern von Artikel
  */
 public class Lager implements IDatenbank {
-    private int horizontal;
-    private int vertikal;
+    private int maxZeilen;
+    private int maxSpalten;
     private Artikel[][] lagerPlan;
-    private static int artikelNummerID = 0001;
 
-    public Lager(int horizontal, int vertikal) {
-        this.horizontal = horizontal;
-        this.vertikal = vertikal;
-        this.lagerPlan = new Artikel[vertikal][horizontal];
 
-        for(int zeile=0; zeile<vertikal; zeile++) {
-            for (int spalte=0; spalte<horizontal; spalte++) {
+    /**
+     * Konstruktor
+     *
+     * @param maxZeilen
+     * @param maxSpalten
+     */
+    public Lager(int maxZeilen, int maxSpalten) {
+        this.maxZeilen = maxZeilen;
+        this.maxSpalten = maxSpalten;
+        this.lagerPlan = new Artikel[maxZeilen][maxSpalten];
+
+        for(int zeile=0; zeile<maxZeilen; zeile++) {
+            for (int spalte=0; spalte<maxSpalten; spalte++) {
                 this.lagerPlan[zeile][spalte] = null;
             }
         }
@@ -28,18 +34,11 @@ public class Lager implements IDatenbank {
     /**
      * Neuen Artikel anlegen und in naechst freier Lagerposition einlagern
      *
-     * @param artikelBezeichnung
-     * @param verpackungsMenge
-     * @param verpackungsEinheit
-     * @param lieferant
-     * @param preis
+     * @param artikelNeu
      */
-    public void addArtikelNeuAutoPosition(String artikelBezeichnung, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis) {
-        Artikel artikelNeu = new Artikel(artikelBezeichnung, artikelNummerID, verpackungsMenge, verpackungsEinheit, lieferant, preis);
-        artikelNummerID++;
-
-        for(int zeile=0; zeile<getVertikal(); zeile++) {
-            for(int spalte=0;spalte<getHorizontal(); spalte++) {
+    public void addArtikelNeuAutoPosition(Artikel artikelNeu) {
+        for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
+            for(int spalte=0;spalte<getMaxSpalten(); spalte++) {
                 if(this.lagerPlan[zeile][spalte] == null) {
                     this.lagerPlan[zeile][spalte] = artikelNeu;
                     return;
@@ -63,19 +62,15 @@ public class Lager implements IDatenbank {
     /**
      * Neuen Artikel anlegen und in bestimmter Lagerposition einlagern
      *
-     * @param artikelBezeichnung
-     * @param verpackungsMenge
-     * @param verpackungsEinheit
-     * @param lieferant
-     * @param preis
+     * @param artikelNeu
      * @param zeile
      * @param spalte
      */
-    public void addArtikelNeuSelectPosition(String artikelBezeichnung, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis, int zeile, int spalte){
-        Artikel artikelNeu = new Artikel(artikelBezeichnung, artikelNummerID, verpackungsMenge, verpackungsEinheit, lieferant, preis);
-        artikelNummerID++;
+    public void addArtikelNeuSelectPosition(Artikel artikelNeu, int zeile, int spalte){
+
         addArtikel(artikelNeu, zeile-1, spalte-1);
     }
+
 
     /**
      * Artikel aus bestimmter Lagerposition auslesen
@@ -85,7 +80,7 @@ public class Lager implements IDatenbank {
      * @return Artikel
      */
     public Artikel getArtikel(int zeile, int spalte){
-        if(horizontal>=zeile && vertikal>=spalte){
+        if(maxZeilen>=zeile && maxSpalten>=spalte){
             return lagerPlan[zeile][spalte];
         }
         return null;
@@ -98,8 +93,8 @@ public class Lager implements IDatenbank {
      * @return Artikel
      */
     public Artikel getArtikelMitNummer(int artikelNummer){
-        for(int zeile=0; zeile<getHorizontal(); zeile++){
-            for(int spalte=0; spalte<getVertikal(); spalte++){
+        for(int zeile=0; zeile<getMaxZeilen(); zeile++){
+            for(int spalte=0; spalte<getMaxSpalten(); spalte++){
                 if(lagerPlan[zeile][spalte] != null){
                     if(getArtikel(zeile, spalte).getArtikelNummer() == artikelNummer) {
                         return getArtikel(zeile, spalte);
@@ -118,8 +113,8 @@ public class Lager implements IDatenbank {
      */
     public Artikel removeArtikel(int artikelNummer) {
         Artikel artikelAlt = null;
-        for(int zeile=0; zeile<getVertikal(); zeile++) {
-            for(int spalte=0;spalte<getHorizontal(); spalte++) {
+        for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
+            for(int spalte=0;spalte<getMaxSpalten(); spalte++) {
                 if(lagerPlan[zeile][spalte] != null){
                     if(lagerPlan[zeile][spalte].getArtikelNummer() == artikelNummer) {
                         artikelAlt = lagerPlan[zeile][spalte];
@@ -142,8 +137,8 @@ public class Lager implements IDatenbank {
     public String sucheArtikel(int artikelNummer){
         String gesuchterArtikel;
         String position;
-        for(int zeile=0; zeile<getVertikal(); zeile++) {
-            for(int spalte=0;spalte<getHorizontal(); spalte++) {
+        for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
+            for(int spalte=0;spalte<getMaxSpalten(); spalte++) {
                 if(lagerPlan[zeile][spalte] != null){
                     if(lagerPlan[zeile][spalte].getArtikelNummer() == artikelNummer) {
                         gesuchterArtikel = lagerPlan[zeile][spalte].toStringArtikelKomplett();
@@ -160,24 +155,24 @@ public class Lager implements IDatenbank {
     /**
      * GET - SET Methoden
      */
-    public void setHorizontal(int horizontal) {
-        this.horizontal = horizontal;
+    public void setMaxZeilen(int maxZeilen) {
+        this.maxZeilen = maxZeilen;
     }
 
-    public void setVertikal(int vertikal) {
-        this.vertikal = vertikal;
+    public void setMaxSpalten(int maxSpalten) {
+        this.maxSpalten = maxSpalten;
     }
 
     public void setLagerPlan(Artikel[][] lagerPlan) {
         this.lagerPlan = lagerPlan;
     }
 
-    public int getHorizontal() {
-        return horizontal;
+    public int getMaxZeilen() {
+        return maxZeilen;
     }
 
-    public int getVertikal() {
-        return vertikal;
+    public int getMaxSpalten() {
+        return maxSpalten;
     }
 
     public Artikel[][] getLagerPlan() {

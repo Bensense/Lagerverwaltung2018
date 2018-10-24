@@ -5,7 +5,7 @@ import java.util.InputMismatchException;
 
 /**
  * @author Benjamin Hammerle
- * @version 13.10.2018
+ * @version 23.10.2018
  *
  * Menue fuer die Lagerverwaltung
  */
@@ -15,6 +15,9 @@ public class Menue {
     private int BefehlEingabe;
     private String hilfeText;
 
+    /**
+     * Konstruktor
+     */
     public Menue() {
         verwaltung = new Verwaltung();
     }
@@ -79,7 +82,8 @@ public class Menue {
 
         do {
             System.out.println("*******************LAGERVERWALTUNG*******************");
-            System.out.println("Aktuelle Lagergroesse: \t\t Zeilen: " + verwaltung.getLager().getHorizontal() + "  Spalten: " + verwaltung.getLager().getVertikal());
+            System.out.println("Aktuelle Lagergroesse: \t\t Zeilen: " + verwaltung.getLager().getMaxZeilen() + "  Spalten: " + verwaltung.getLager().getMaxSpalten());
+            System.out.println();
             System.out.println("1 = Lager konfigurieren");
             System.out.println("2 = Artikel einlagern an naechst freier Position");
             System.out.println("3 = Artikel einlagern an bestimmter Position");
@@ -130,7 +134,7 @@ public class Menue {
                     System.out.print("Preis(double): ");
                     double preis1 = doubleEingabeBefehl();
                     System.out.println();
-                    verwaltung.getLager().addArtikelNeuAutoPosition(artikelBezeichnung1, verpackungsMenge1, verpackungsEinheit1, lieferant1, preis1);
+                    verwaltung.artikelEinlagernAutoPosition(artikelBezeichnung1, verpackungsMenge1, verpackungsEinheit1, lieferant1, preis1);
                     System.out.println("Artikel eingelagert");
                     System.out.println();
                     System.out.println("**************************************************************");
@@ -150,15 +154,16 @@ public class Menue {
                     String lieferant2 = scan.next();
                     System.out.print("Preis(double): ");
                     double preis2 = doubleEingabeBefehl();
+
                     do{
                         System.out.println("POSITION WAEHLEN: ");
                         System.out.print("Zeile: ");
                         int zeile = intEingabeBefehl();
                         System.out.print("Spalte: ");
                         int spalte = intEingabeBefehl();
-                        if(zeile <= verwaltung.getLager().getVertikal() && spalte <= verwaltung.getLager().getHorizontal()){
+                        if(zeile <= verwaltung.getLager().getMaxZeilen() && spalte <= verwaltung.getLager().getMaxSpalten()){
                             if(verwaltung.getLager().getArtikel(zeile-1, spalte-1) == null){
-                                verwaltung.getLager().addArtikelNeuSelectPosition(artikelBezeichnung2, verpackungsMenge2, verpackungsEinheit2, lieferant2, preis2, zeile, spalte);
+                                verwaltung.artikelEinlagernSelectPosition(artikelBezeichnung2, verpackungsMenge2, verpackungsEinheit2, lieferant2, preis2, zeile, spalte);
                                 System.out.println("Artikel eingelagert");
                                 positionierenMoeglich = true;
                             }
@@ -178,8 +183,8 @@ public class Menue {
                     int artikelNummerAuswahl;
                     String artikelAlt = null;
                         System.out.println("***********************ARTIKEL AUSLIEFERN**********************");
-                        for(int zeile=0; zeile<verwaltung.getLager().getHorizontal(); zeile++){
-                            for(int spalte=0; spalte<verwaltung.getLager().getVertikal(); spalte++){
+                        for(int zeile=0; zeile<verwaltung.getLager().getMaxZeilen(); zeile++){
+                            for(int spalte=0; spalte<verwaltung.getLager().getMaxSpalten(); spalte++){
                                 if(verwaltung.getLager().getArtikel(zeile, spalte)!=null){
                                     System.out.println(verwaltung.getLager().getArtikel(zeile, spalte).toStringArtikelKurz());
                                 }
@@ -245,8 +250,8 @@ public class Menue {
                     System.out.print("Spalte eingeben: ");
                     int spalte = intEingabeBefehl();
                     System.out.println("Position: Zeile: " + zeile + " Spalte: " + spalte);
-                    if(verwaltung.getLager().getArtikel(zeile, spalte) != null){
-                        System.out.println(verwaltung.getLager().getArtikel(zeile, spalte).toStringArtikelKomplett());
+                    if(verwaltung.getLager().getArtikel(zeile-1, spalte-1) != null){
+                        System.out.println(verwaltung.getLager().getArtikel(zeile-1, spalte-1).toStringArtikelKomplett());
                     }
                     else{
                         System.out.println("Lagerposition ist noch frei");
@@ -307,12 +312,12 @@ public class Menue {
      * fuellt Lager mit Beispielartikel
      */
     public void addBeispielArtikel(){
-        verwaltung.getLager().addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
-        verwaltung.getLager().addArtikelNeuAutoPosition("Semmel", 5.0, "Stueck", "Baecker", 1.80);
-        verwaltung.getLager().addArtikelNeuAutoPosition("Banane", 0.3, "kg   ", "Banana Joe", 1.20);
-        verwaltung.getLager().addArtikelNeuAutoPosition("Wurst", 0.4, "kg   ", "Metzger", 3.50);
-        verwaltung.getLager().addArtikelNeuAutoPosition("Salat", 1.0, "Stueck", "vom Baua", 1.20);
-        verwaltung.getLager().addArtikelNeuAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
+        verwaltung.artikelEinlagernAutoPosition("Milch", 0.5, "Liter", "Tirol Milch", 1.20);
+        verwaltung.artikelEinlagernAutoPosition("Semmel", 5.0, "Stueck", "Baecker", 1.80);
+        verwaltung.artikelEinlagernAutoPosition("Banane", 0.3, "kg   ", "Banana Joe", 1.20);
+        verwaltung.artikelEinlagernAutoPosition("Wurst", 0.4, "kg   ", "Metzger", 3.50);
+        verwaltung.artikelEinlagernAutoPosition("Salat", 1.0, "Stueck", "vom Baua", 1.20);
+        verwaltung.artikelEinlagernAutoPosition("Brot", 1.0, "Stueck", "Tirol Brot", 2.20);
     }
 
     /**

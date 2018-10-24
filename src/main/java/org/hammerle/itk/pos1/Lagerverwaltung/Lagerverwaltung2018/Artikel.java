@@ -3,7 +3,7 @@ package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 
 /**
  * @author Benjamin Hammerle
- * @version 01
+ * @version 23.10.2018
  *
  * Artikel die eingerlagert werden koennen
  */
@@ -15,6 +15,16 @@ public class Artikel {
     private Lieferant lieferant;
     private double preis;
 
+    /**
+     * Konstruktor
+     *
+     * @param artikelBezeichnung
+     * @param artikelNummer
+     * @param verpackungsMenge
+     * @param verpackungsEinheit
+     * @param lieferant
+     * @param preis
+     */
     public Artikel(String artikelBezeichnung, int artikelNummer, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis) {
         this.artikelBezeichnung = artikelBezeichnung;
         this.artikelNummer = artikelNummer;
