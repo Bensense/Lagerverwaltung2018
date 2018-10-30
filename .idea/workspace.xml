@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a4da9ed7-fd43-4390-818a-43def60ad51f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Menue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Menue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Verwaltung.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Verwaltung.java" afterDir="false" />
     </list>
@@ -23,24 +21,25 @@
     <session id="-1920636999">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="18" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.0" value="2" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.open.time.7" value="3" />
-          <entry key="project.open.time.8" value="10" />
-          <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="19" />
+          <entry key="project.open.time.10" value="1" />
+          <entry key="project.open.time.5" value="2" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="4" />
+          <entry key="project.open.time.8" value="13" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="App" value="1" />
           <entry key="JavaScript-modules-diagram/C:/JAVA/Lagerverwaltung2018/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018" value="2" />
-          <entry key="Lagerverwaltung2018" value="4" />
+          <entry key="Lagerverwaltung2018" value="6" />
           <entry key="iml" value="1" />
-          <entry key="java" value="12" />
+          <entry key="java" value="15" />
           <entry key="uml" value="3" />
           <entry key="xml" value="1" />
         </counts>
@@ -48,19 +47,19 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="IDEA_MODULE" value="1" />
-          <entry key="JAVA" value="12" />
-          <entry key="UML" value="10" />
+          <entry key="JAVA" value="15" />
+          <entry key="UML" value="12" />
           <entry key="XML" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="17448" />
+          <entry key="java" value="25105" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="17448" />
+          <entry key="JAVA" value="25105" />
         </counts>
       </usages-collector>
     </session>
@@ -68,28 +67,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+            <state relative-caret-position="2924">
+              <caret line="172" column="55" selection-start-line="172" selection-start-column="55" selection-end-line="172" selection-end-column="55" />
             </state>
           </provider>
         </entry>
@@ -97,8 +78,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+            <state relative-caret-position="1071">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="32" selection-start-line="32" selection-end-line="32" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -106,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Verwaltung.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-57">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+            <state relative-caret-position="2856">
+              <caret line="168" column="45" selection-start-line="168" selection-start-column="45" selection-end-line="168" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -115,8 +114,21 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-228">
-              <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+            <state relative-caret-position="918">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/DTO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="41" />
+              <folding>
+                <element signature="e#2221#2222#0" expanded="true" />
+                <element signature="e#2253#2254#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -124,10 +136,16 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Menue.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="319" column="82" selection-start-line="319" selection-start-column="82" selection-end-line="319" selection-end-column="82" />
+            <state relative-caret-position="212">
+              <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#21809#21810#0" expanded="true" />
+                <element signature="e#21841#21842#0" expanded="true" />
+                <element signature="e#21896#21897#0" expanded="true" />
+                <element signature="e#21940#21941#0" expanded="true" />
+                <element signature="e#21980#21981#0" expanded="true" />
+                <element signature="e#22013#22014#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,8 +154,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="306">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
@@ -161,11 +179,12 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/DTO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Verwaltung.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Menue.java" />
       </list>
     </option>
@@ -178,7 +197,7 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-7" />
-    <option name="width" value="1361" />
+    <option name="width" value="1467" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -187,7 +206,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -226,13 +244,14 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="SearchEverywhereHistoryKey" value="class diagram&#9;ACTION&#9;NewJavaDiagram" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539463407847" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540856792098" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -298,17 +317,26 @@
       <workItem from="1539697149402" duration="593000" />
       <workItem from="1540311552672" duration="4236000" />
       <workItem from="1540371677421" duration="5382000" />
-      <workItem from="1540377218352" duration="2793000" />
+      <workItem from="1540377218352" duration="7399000" />
+      <workItem from="1540653264196" duration="23000" />
+      <workItem from="1540654095815" duration="614000" />
+      <workItem from="1540741116523" duration="2470000" />
+      <workItem from="1540828357401" duration="10974000" />
+      <workItem from="1540843675291" duration="11222000" />
+      <workItem from="1540899376018" duration="2714000" />
+      <workItem from="1540903631703" duration="3748000" />
+      <workItem from="1540907481874" duration="2162000" />
+      <workItem from="1540913795765" duration="395000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="83677000" />
+    <option name="totallyTimeSpent" value="122605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14179105" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -317,7 +345,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.69088936" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.61496747" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -338,7 +366,7 @@
       <window_info anchor="right" id="Maven Projects" order="8" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26599148" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.21002132" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -347,16 +375,16 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.80151844" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.029284164" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="10" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="11" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -426,170 +454,98 @@
           <ID>JAVA</ID>
           <OriginalElement>org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018</OriginalElement>
           <nodes>
-            <node x="689.6908333333333" y="0.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.AppTest</node>
-            <node x="288.1908333333334" y="917.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer</node>
-            <node x="160.69083333333336" y="571.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager</node>
-            <node x="365.3566666666666" y="1645.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.App</node>
-            <node x="333.62750000000005" y="0.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lieferant</node>
-            <node x="335.3566666666666" y="1343.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Menue</node>
-            <node x="96.84625000000008" y="1107.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung</node>
-            <node x="0.0" y="403.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank</node>
-            <node x="249.62750000000003" y="124.0">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Artikel</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.AppTest</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.App</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lieferant</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Menue</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank</node>
+            <node x="" y="">org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Artikel</node>
           </nodes>
           <notes />
-          <edges>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Artikel">
-              <point x="60.5" y="-148.0" />
-              <point x="463.19083333333333" y="551.0" />
-              <point x="468.07958333333335" y="551.0" />
-              <point x="468.07958333333335" y="373.0" />
-              <point x="452.75250000000005" y="373.0" />
-              <point x="40.625" y="114.5" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager">
-              <point x="-5.6843418860808015E-14" y="-93.0" />
-              <point x="263.84625000000005" y="1087.0" />
-              <point x="266.6908333333334" y="1087.0" />
-              <point x="266.6908333333334" y="897.0" />
-              <point x="241.35750000000002" y="897.0" />
-              <point x="-161.33333333333334" y="148.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank">
-              <point x="-133.60000000000002" y="-93.0" />
-              <point x="130.24625000000006" y="1087.0" />
-              <point x="99.00000000000003" y="1087.0" />
-              <point x="99.00000000000003" y="551.0" />
-              <point x="28.875" y="551.0" />
-              <point x="-86.625" y="59.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Menue" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer">
-              <point x="5.6843418860808015E-14" y="-126.0" />
-              <point x="449.8566666666667" y="1318.0" />
-              <point x="482.52333333333337" y="1318.0" />
-              <point x="482.52333333333337" y="1087.0" />
-              <point x="455.1908333333334" y="1087.0" />
-              <point x="0.0" y="70.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Artikel" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lieferant">
-              <point x="108.33333333333337" y="-114.5" />
-              <point x="520.4608333333334" y="99.0" />
-              <point x="464.4608333333334" y="99.0" />
-              <point x="52.33333333333337" y="37.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank">
-              <point x="-181.5" y="-148.0" />
-              <point x="221.19083333333336" y="551.0" />
-              <point x="202.125" y="551.0" />
-              <point x="86.625" y="59.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer">
-              <point x="133.59999999999997" y="-93.0" />
-              <point x="397.4462500000001" y="1087.0" />
-              <point x="343.8575000000001" y="1087.0" />
-              <point x="-111.33333333333331" y="70.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Menue" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Verwaltung">
-              <point x="-76.33333333333326" y="-126.0" />
-              <point x="373.52333333333337" y="1318.0" />
-              <point x="263.84625000000005" y="1318.0" />
-              <point x="0.0" y="93.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank">
-              <point x="-83.50000000000006" y="-70.0" />
-              <point x="371.69083333333333" y="887.0" />
-              <point x="150.19083333333336" y="887.0" />
-              <point x="150.19083333333336" y="551.0" />
-              <point x="144.375" y="551.0" />
-              <point x="28.875" y="59.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IDatenbank" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Artikel">
-              <point x="0.0" y="-59.0" />
-              <point x="115.5" y="383.0" />
-              <point x="290.25250000000005" y="383.0" />
-              <point x="-121.875" y="114.5" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.IBenutzer" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Lager">
-              <point x="83.49999999999994" y="-70.0" />
-              <point x="538.6908333333333" y="897.0" />
-              <point x="564.0241666666667" y="897.0" />
-              <point x="161.33333333333337" y="148.0" />
-            </edge>
-            <edge source="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.App" target="org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018.Menue">
-              <point x="-42.25" y="-25.5" />
-              <point x="407.6066666666666" y="1620.0" />
-              <point x="392.6066666666666" y="1620.0" />
-              <point x="-57.25" y="126.0" />
-            </edge>
-          </edges>
-          <settings layout="Hierarchic Group" zoom="1.0" x="-54.0" y="866.0" />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="131.0" y="165.0" />
           <SelectedNodes />
-          <Categories>
-            <Category>Fields</Category>
-            <Category>Constructors</Category>
-            <Category>Methods</Category>
-            <Category>Properties</Category>
-            <Category>Inner Classes</Category>
-          </Categories>
+          <Categories />
           <SCOPE>All</SCOPE>
           <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="6" selection-start-line="14" selection-start-column="6" selection-end-line="14" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="6" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        <state relative-caret-position="2924">
+          <caret line="172" column="55" selection-start-line="172" selection-start-column="55" selection-end-line="172" selection-end-column="55" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IDatenbank.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
+        <state relative-caret-position="1071">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lieferant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-228">
-          <caret line="32" column="24" selection-start-line="32" selection-start-column="24" selection-end-line="32" selection-end-column="24" />
+        <state relative-caret-position="442">
+          <caret line="32" selection-start-line="32" selection-end-line="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Lager.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Artikel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
-          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+          <caret line="21" column="6" selection-start-line="21" selection-start-column="6" selection-end-line="21" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Verwaltung.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-57">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        <state relative-caret-position="2856">
+          <caret line="168" column="45" selection-start-line="168" selection-start-column="45" selection-end-line="168" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/IBenutzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="918">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/DTO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="27" column="8" selection-start-line="27" selection-start-column="8" selection-end-line="27" selection-end-column="41" />
+          <folding>
+            <element signature="e#2221#2222#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/App.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/hammerle/itk/pos1/Lagerverwaltung/Lagerverwaltung2018/Menue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="319" column="82" selection-start-line="319" selection-start-column="82" selection-end-line="319" selection-end-column="82" />
+        <state relative-caret-position="212">
+          <caret line="129" column="72" selection-start-line="129" selection-start-column="72" selection-end-line="129" selection-end-column="72" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#21809#21810#0" expanded="true" />
+            <element signature="e#21841#21842#0" expanded="true" />
+            <element signature="e#21896#21897#0" expanded="true" />
+            <element signature="e#21940#21941#0" expanded="true" />
+            <element signature="e#21980#21981#0" expanded="true" />
+            <element signature="e#22013#22014#0" expanded="true" />
           </folding>
         </state>
       </provider>

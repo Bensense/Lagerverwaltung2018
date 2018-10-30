@@ -36,47 +36,20 @@ public interface IBenutzer {
     IDatenbank lagerKonfigurieren(Lager lagerAktuell, int maxZeilenNeu, int maxSpaltenNeu);
 
     /**
-     * erstellt einen neuen Artikel
-     *
-     * @param artikelBezeichnung1
-     * @param verpackungsMenge1
-     * @param verpackungsEinheit1
-     * @param lieferant1
-     * @param preis1
-     * @return
-     */
-    Artikel artikelErstellen(String artikelBezeichnung1, double verpackungsMenge1, String verpackungsEinheit1, String lieferant1, double preis1);
-
-
-    /**
      * erstellt neuen Artikel und positioniert an naechst freier Lagerposition
      *
-     * @param artikelBezeichnung
-     * @param verpackungsMenge
-     * @param VerpackungsEinheit
-     * @param lieferant
-     * @param preis
+     * @param artikelVO
      */
-    void artikelEinlagernAutoPosition(String artikelBezeichnung, double verpackungsMenge, String VerpackungsEinheit, String lieferant, double preis);
+    void artikelEinlagernAutoPosition(DTO artikelVO);
 
     /**
      * erstell neuen Artikel und positioniert an selektierten Lagerposition
      *
-     * @param artikelBezeichnung2
-     * @param verpackungsMenge2
-     * @param verpackungsEinheit2
-     * @param lieferant2
-     * @param preis2
+     * @param artikelVO
      * @param zeile
      * @param spalte
      */
-    void artikelEinlagernSelectPosition(String artikelBezeichnung2, double verpackungsMenge2, String verpackungsEinheit2, String lieferant2, double preis2, int zeile, int spalte);
-
-    /**
-     * erstellt String des Lagerbestandes
-     * @return String Lager
-     */
-    String lagertoString();
+    void artikelEinlagernSelectPosition(DTO artikelVO, int zeile, int spalte);
 
 
 
@@ -87,4 +60,43 @@ public interface IBenutzer {
     void setLager(IDatenbank lager);
 
 
+    /**
+     * sucht Artikel via Artikelnummer, fuegt ihn in DTO ein und uebergibt DTO
+     *
+     * @param artikelNummerAuswahl
+     * @return
+     */
+    DTO getArtikelViaArtikelID(int artikelNummerAuswahl);
+
+    /**
+     * sucht alle Artikel im Lager, fuegt sie in DTO ein und uebergibt DTO
+     *
+     * @return
+     */
+    DTO getAlleArtikel();
+
+    /**
+     * sucht alle Artikel im Lager mit bestimmten Artikelbezeichnung, fuegt sie in DTO ein und uebergibt DTO
+     *
+     * @param artikelBezeichnungSuche
+     * @return
+     */
+    DTO getArtikelViaArtikelBezeichnung(String artikelBezeichnungSuche);
+
+    /**
+     * gibt Inhalt einer bestimmten Lager Position wieder
+     *
+     * @param zeile
+     * @param spalte
+     * @return
+     */
+    DTO getPositionInhalt(int zeile, int spalte);
+
+    /**
+     * sucht Artikel via Artikelnummer und aendert ihn
+     *
+     * @param artikelVeraendert
+     * @param artikelIDSuche
+     */
+    void artikelAendern(DTO artikelVeraendert, int artikelIDSuche);
 }

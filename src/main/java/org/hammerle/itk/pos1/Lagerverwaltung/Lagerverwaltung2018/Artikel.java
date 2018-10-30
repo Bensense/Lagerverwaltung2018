@@ -14,6 +14,8 @@ public class Artikel {
     private String verpackungsEinheit;
     private Lieferant lieferant;
     private double preis;
+    private int positionZeile;
+    private int positionSpalte;
 
     /**
      * Konstruktor
@@ -40,7 +42,7 @@ public class Artikel {
      * @return String Artikel
      */
     public String toStringArtikelKurz() {
-        String artikelString = "Artikelnummer: " + getArtikelNummer() + "\t Artikelbezeichnung: " + getArtikelBezeichnung() + "\t Verpackungseinheit: " + getVerpackungsMenge() + " "+ getVerpackungsEinheit() + "\t Preis: " + getPreis() +" Euro";
+        String artikelString = "Zeile: " + getPositionZeile() + "  Spalte: " + getPositionSpalte() + "\t     Artikelnummer: " + getArtikelNummer() + "\t Artikelbezeichnung: " + getArtikelBezeichnung() + "\t Verpackungseinheit: " + getVerpackungsMenge() + " "+ getVerpackungsEinheit() + "\t Preis: " + getPreis() +" Euro";
         return artikelString;
     }
 
@@ -50,6 +52,7 @@ public class Artikel {
      */
     public String toStringArtikelKomplett() {
         String artikelString = "";
+        artikelString += "Position:  Zeile: " + getPositionZeile() + "  Spalte: " + getPositionSpalte() + "\n";
         artikelString += "Artikelbezeichnung: " + getArtikelBezeichnung() + "\n";
         artikelString += "Artikelnummer:      " + getArtikelNummer() + "\n";
         artikelString += "Verpackungeinheit:  " + getVerpackungsMenge() + " " + getVerpackungsEinheit() + "\n";
@@ -78,12 +81,20 @@ public class Artikel {
         this.verpackungsEinheit = verpackungsEinheit;
     }
 
-    public void setLieferant(Lieferant lieferant) {
-        this.lieferant = lieferant;
+    public void setLieferant(String lieferant) {
+        Lieferant lieferantNeu = new Lieferant(lieferant);
+        this.lieferant = lieferantNeu;
     }
 
     public void setPreis(double preis) {
         this.preis = preis;
+    }
+
+    public void setPositionZeile(int positionZeile) {
+        this.positionZeile = positionZeile;
+    }
+    public void setPositionSpalte(int positionSpalte) {
+        this.positionSpalte = positionSpalte;
     }
 
     public String getArtikelBezeichnung() {
@@ -108,5 +119,13 @@ public class Artikel {
 
     public double getPreis() {
         return preis;
+    }
+
+    public int getPositionZeile() {
+        return positionZeile;
+    }
+
+    public int getPositionSpalte() {
+        return positionSpalte;
     }
 }

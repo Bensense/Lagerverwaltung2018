@@ -53,4 +53,13 @@ public interface IDatenbank {
     Artikel getArtikel(int zeile, int spalte);
 
 
+    /**
+     * Sucht Artikel via Artikelnummer
+     *
+     * @param artikelNummerID
+     * @return gesuchter Artikel falls vorhanden, sonst null
+     */
+    Artikel sucheArtikel(int artikelNummerID);
+
+
 }

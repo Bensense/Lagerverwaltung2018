@@ -46,14 +46,104 @@ public class Verwaltung implements IBenutzer {
         return artikelNeu;
     }
 
-    public void artikelEinlagernAutoPosition(String artikelBezeichnung, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis) {
+    public void artikelEinlagernAutoPosition(DTO artikelVO) {
+        String artikelBezeichnung = artikelVO.getArtikelBezeichnung();
+        double verpackungsMenge = artikelVO.getVerpackungsMenge();
+        String verpackungsEinheit = artikelVO.getVerpackungsEinheit();
+        String lieferant = artikelVO.getLieferant();
+        double preis = artikelVO.getPreis();
         Artikel artikelNeu = artikelErstellen(artikelBezeichnung, verpackungsMenge, verpackungsEinheit, lieferant, preis);
         this.lager.addArtikelNeuAutoPosition(artikelNeu);
     }
 
-    public void artikelEinlagernSelectPosition(String artikelBezeichnung, double verpackungsMenge, String verpackungsEinheit, String lieferant, double preis, int zeile, int spalte) {
+    public void artikelEinlagernSelectPosition(DTO artikelVO, int zeile, int spalte) {
+        String artikelBezeichnung = artikelVO.getArtikelBezeichnung();
+        double verpackungsMenge = artikelVO.getVerpackungsMenge();
+        String verpackungsEinheit = artikelVO.getVerpackungsEinheit();
+        String lieferant = artikelVO.getLieferant();
+        double preis = artikelVO.getPreis();
         Artikel artikelNeu = artikelErstellen(artikelBezeichnung, verpackungsMenge, verpackungsEinheit, lieferant, preis);
         this.lager.addArtikelNeuSelectPosition(artikelNeu, zeile, spalte);
+    }
+
+    /**
+     * Sucht Artikel im Lager via Artikelnummer und uebergibt ihn in einem DTO
+     *
+     * @param artikelNummerID
+     * @return
+     */
+    public DTO getArtikelViaArtikelID(int artikelNummerID) {
+        DTO artikelVO = new DTO();
+        artikelVO.addArtikel(this.lager.sucheArtikel(artikelNummerID));
+        return artikelVO;
+    }
+
+    /**
+     * Sucht alle Artikel mit bestimmter Artikelbezeichnung und uebergibt sie einem DTO
+     *
+     * @param artikelBezeichnung
+     * @return DTO Objekt
+     */
+    public DTO getArtikelViaArtikelBezeichnung(String artikelBezeichnung) {
+        DTO artikelVO = new DTO();
+        for(int zeile=0; zeile<lager.getMaxZeilen(); zeile++) {
+            for(int spalte=0; spalte<lager.getMaxSpalten(); spalte++) {
+                if(lager.getArtikel(zeile, spalte) != null) {
+                    if(lager.getArtikel(zeile, spalte).getArtikelBezeichnung().equals(artikelBezeichnung)) {
+                        artikelVO.addArtikel(lager.getArtikel(zeile, spalte));
+                    }
+                }
+            }
+        }
+        return artikelVO;
+    }
+
+    /**
+     * uebergibt Inhalt einer bestimmten Lager Position einem DTO
+     *
+     * @param zeile
+     * @param spalte
+     * @return DTO Objekt
+     */
+    public DTO getPositionInhalt(int zeile, int spalte) {
+        if(lager.getArtikel(zeile, spalte) != null) {
+            DTO positionInhalt = new DTO();
+            positionInhalt.addArtikel(lager.getArtikel(zeile, spalte));
+            return positionInhalt;
+        }
+        return null;
+    }
+
+    /**
+     * sucht Artikel via Artikelnummer und aendert ihn
+     *
+     * @param artikelVO
+     * @param artikelNummerID
+     */
+    public void artikelAendern(DTO artikelVO, int artikelNummerID) {
+
+        lager.sucheArtikel(artikelNummerID).setArtikelBezeichnung(artikelVO.getArtikelBezeichnung());
+        lager.sucheArtikel(artikelNummerID).setVerpackungsMenge(artikelVO.getVerpackungsMenge());
+        lager.sucheArtikel(artikelNummerID).setVerpackungsEinheit(artikelVO.getVerpackungsEinheit());
+        lager.sucheArtikel(artikelNummerID).setLieferant(artikelVO.getLieferant());
+        lager.sucheArtikel(artikelNummerID).setPreis(artikelVO.getPreis());
+    }
+
+    /**
+     * sucht alle Artikel im Lager, fuegt sie in DTO ein und uebergibt DTO
+     *
+     * @return
+     */
+    public DTO getAlleArtikel() {
+        DTO artikelVO = new DTO();
+        for(int zeile=0; zeile<lager.getMaxZeilen(); zeile++) {
+            for(int spalte=0; spalte<lager.getMaxSpalten(); spalte++) {
+                if(lager.getArtikel(zeile, spalte) != null) {
+                    artikelVO.addArtikel(lager.getArtikel(zeile, spalte));
+                }
+            }
+        }
+        return artikelVO;
     }
 
     /**
@@ -79,8 +169,6 @@ public class Verwaltung implements IBenutzer {
         if(maxSpaltenNeu>=maxSpaltenAktuell){
             horizontalNeuMoeglich = true;
         }
-
-
         // wenn neu groesser
         if(horizontalNeuMoeglich==true && vertikalNeuMoeglich==true){
             pruefSummeMoeglich = true;
@@ -177,7 +265,7 @@ public class Verwaltung implements IBenutzer {
         for(int zeile=0; zeile<lager.getMaxZeilen(); zeile++){
             for(int spalte=0; spalte<lager.getMaxSpalten(); spalte++){
                 if(lager.getArtikel(zeile, spalte) != null){
-                    lagerString += "Zeile: " + (zeile+1) + " Spalte: " + (spalte+1) + "    \t" + lager.getArtikel(zeile, spalte).toStringArtikelKurz() + "\n";
+                    lagerString += lager.getArtikel(zeile, spalte).toStringArtikelKurz() + "\n";
                 }
             }
         }

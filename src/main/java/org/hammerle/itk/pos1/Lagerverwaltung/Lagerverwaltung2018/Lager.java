@@ -1,5 +1,7 @@
 package org.hammerle.itk.pos1.Lagerverwaltung.Lagerverwaltung2018;
 
+import java.util.ArrayList;
+
 
 /**
  * @author Benjamin Hammerle
@@ -40,6 +42,10 @@ public class Lager implements IDatenbank {
         for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
             for(int spalte=0;spalte<getMaxSpalten(); spalte++) {
                 if(this.lagerPlan[zeile][spalte] == null) {
+                    int positionZeile = zeile + 1;
+                    int positionSpalte = spalte +1;
+                    artikelNeu.setPositionZeile(positionZeile);
+                    artikelNeu.setPositionSpalte(positionSpalte);
                     this.lagerPlan[zeile][spalte] = artikelNeu;
                     return;
                 }
@@ -56,6 +62,10 @@ public class Lager implements IDatenbank {
      * @param spalte
      */
     public void addArtikel(Artikel artikel, int zeile, int spalte){
+        int positionZeile = zeile + 1;
+        int positionSpalte = spalte + 1;
+        artikel.setPositionZeile(positionZeile);
+        artikel.setPositionSpalte(positionSpalte);
         lagerPlan[zeile][spalte] = artikel;
     }
 
@@ -67,7 +77,8 @@ public class Lager implements IDatenbank {
      * @param spalte
      */
     public void addArtikelNeuSelectPosition(Artikel artikelNeu, int zeile, int spalte){
-
+        artikelNeu.setPositionZeile(zeile);
+        artikelNeu.setPositionSpalte(spalte);
         addArtikel(artikelNeu, zeile-1, spalte-1);
     }
 
@@ -134,22 +145,39 @@ public class Lager implements IDatenbank {
      * @param artikelNummer
      * @return String des Artikels mit Position
      */
-    public String sucheArtikel(int artikelNummer){
-        String gesuchterArtikel;
-        String position;
+    public Artikel sucheArtikel(int artikelNummer){
+        Artikel gesuchterArtikel;
         for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
             for(int spalte=0;spalte<getMaxSpalten(); spalte++) {
                 if(lagerPlan[zeile][spalte] != null){
                     if(lagerPlan[zeile][spalte].getArtikelNummer() == artikelNummer) {
-                        gesuchterArtikel = lagerPlan[zeile][spalte].toStringArtikelKomplett();
-                        position = "\nZeile: " + zeile+1 + "\t Spalte: " + spalte+1;
-                        gesuchterArtikel += position;
+                        gesuchterArtikel = lagerPlan[zeile][spalte];
                         return gesuchterArtikel;
                     }
                 }
             }
         }
         return null;
+    }
+
+    /**
+     * Durchsucht Lager nach Artikeln mit bestimmter Artikelbezeichnung
+     *
+     * @param artikelBezeichnung
+     * @return ArrayList mit gesuchten Artikeln
+     */
+    public ArrayList<Artikel> sucheArtikelViaBezeichnung(String artikelBezeichnung) {
+        ArrayList<Artikel> ergebnisListe = new ArrayList<>();
+        for(int zeile=0; zeile<getMaxZeilen(); zeile++) {
+            for (int spalte = 0; spalte < getMaxSpalten(); spalte++) {
+                if (lagerPlan[zeile][spalte] != null) {
+                    if(lagerPlan[zeile][spalte].getArtikelBezeichnung().equals(artikelBezeichnung)) {
+                        ergebnisListe.add(lagerPlan[zeile][spalte]);
+                    }
+                }
+            }
+        }
+        return ergebnisListe;
     }
 
     /**
